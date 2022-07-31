@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-image: url('https://media.istockphoto.com/photos/sad-woman-listening-to-music-on-the-floor-picture-id1299858471?k=20&m=1299858471&s=612x612&w=0&h=QTeTnqptjcBZsQYPTqPz_3WuLHdJhaG6_WUORYoIKq8=');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .nav li a:hover{
+            color: blue;
+        }
+        .nav li {
+            float: right;
+            list-style: none;
+        }
+        .nav a {
+            list-style: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1rem;
+            font-weight: 550;
+            display: block;
+            padding: 5px 35px;
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 45%;
+        }
+
+        .left-col {
+            margin-left: 11%;
+        }
+        .left-col h1 {
+            font-size: 50px;
+            color: crimson;
+        }
+        .right-col {
+            float: right;
+            margin-right: 10%;
+            margin-top: -5%;
+            display: flex;
+            align-items: center;
+        }
+        .right-col p {
+            font-size: 0px;
+            color: black;
+            font-weight: bold;
+            margin-right: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">ARTISTS</a></li>
+            <li><a href="#">MUSIC</a></li>
+            <li><a href="#">HOME</a></li>
+        </ul>
+    </div>
+ 
+    <div class="content">
+        <div class="left-col">
+            <h1>MY <br>MUSICS</h1>
+        </div>
+ 
+        <div class="right-col">     
+        Click Here To Listen
+        <button><img src="https://cdn3.vectorstock.com/i/1000x1000/12/37/music-logo-creative-icon-vector-29591237.jpg" width="30px" height="30px" id="icon";/>
+        </button>
+        </div>
+        <audio id="mymusic">
+            <source src="C:\Users\USER\Downloads\Alan Walker - Fade _NCS Release_ ( 256kbps cbr ).mp3">
+        </audio>
+    <script>
+        var mymusic = document.getElementById("mymusic");
+        var icon = document.getElementById("icon");
+
+
+        icon.onclick = function() {
+            if(mymusic.paused) {
+
+                mymusic.play();
+                icon.src ="https://cdn3.vectorstock.com/i/1000x1000/12/37/music-logo-creative-icon-vector-29591237.jpg";
+            }
+            else {
+                 
+                mymusic.pause();
+                icon.src ="https://cdn3.vectorstock.com/i/1000x1000/12/37/music-logo-creative-icon-vector-29591237.jpg";
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>
